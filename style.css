@@ -429,13 +429,14 @@ nav h3 {
     width: 100%;
     background-color: #000;
     color: #fff;
-    z-index: 1;
+    z-index: 12;
     bottom: 0;
     display: flex;
     /* align-items: flex-end; */
     justify-content: flex-end;
     flex-direction: column;
     padding: 1vw 3vw;
+    pointer-events: none;
 }
 
 #footer h1 {
