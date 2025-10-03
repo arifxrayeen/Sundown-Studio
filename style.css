@@ -130,6 +130,9 @@ nav h3 {
     border-radius: 30px;
     margin-top: 4vw;
     width: 100%;
+    z-index: 11;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 #hero-shape {
@@ -372,6 +375,8 @@ nav h3 {
     display: none;
     background-size: cover;
     background-position: center;
+    will-change: background-image, opacity;
+    transition: opacity 120ms ease-out;
 }
 
 #page4 {
@@ -424,7 +429,7 @@ nav h3 {
     width: 100%;
     background-color: #000;
     color: #fff;
-    z-index: 9;
+    z-index: 1;
     bottom: 0;
     display: flex;
     /* align-items: flex-end; */
@@ -656,7 +661,7 @@ nav h3 {
     color: transparent;
     background: linear-gradient(to right,orange,orangered);
     -webkit-background-clip: text;
-    background-clip: text;  /* ← You added this line */
+    background-clip: text;
     position: absolute;
     opacity: 0;
     animation-name: load;

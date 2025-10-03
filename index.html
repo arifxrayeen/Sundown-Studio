@@ -50,7 +50,7 @@
                 <div id="hero-2"></div>
                 <div id="hero-3"></div>
             </div>
-            <video autoplay loop muted src="./video.mp4"></video>
+            <video autoplay loop muted playsinline webkit-playsinline preload="auto" src="./video.mp4"></video>
         </div>
         <div id="page2">
             <div id="moving-text">
@@ -188,6 +188,14 @@
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    
+    <!-- Fallback for smooth scrolling if Locomotive Scroll fails -->
+    <script>
+        // Fallback smooth scrolling
+        if (typeof LocomotiveScroll === 'undefined') {
+            document.documentElement.style.scrollBehavior = 'smooth';
+        }
+    </script>
 </body>
 
 </html>
