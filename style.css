@@ -30,7 +30,7 @@ html, body {
 #main {
     /* background-color: #000; */
     position: relative;
-    z-index: 10;
+    z-index: auto;
 }
 
 #page1 {
@@ -424,23 +424,25 @@ nav h3 {
 }
 
 #footer {
-    position: fixed;
-    height: 105vh;
+    position: relative;
+    min-height: 105vh;
     width: 100%;
     background-color: #000;
     color: #fff;
-    z-index: 12;
+    z-index: 9;
     bottom: 0;
     display: flex;
-    /* align-items: flex-end; */
     justify-content: flex-end;
     flex-direction: column;
     padding: 1vw 3vw;
-    pointer-events: none;
 }
 
 #footer h1 {
     font-size: 23vw;
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    margin-bottom: 2vw;
 }
 
 #footer-div {
